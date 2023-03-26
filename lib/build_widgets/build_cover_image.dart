@@ -10,7 +10,7 @@ class BuildCoverImage extends StatelessWidget {
     return Container(
       color: Colors.grey,
       child: Image.asset(
-         'assets/background_image.jpg',
+         ' ',
           width: double.infinity,
           height: coverHeight,
           fit: BoxFit.cover

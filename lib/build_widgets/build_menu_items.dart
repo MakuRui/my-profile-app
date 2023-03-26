@@ -8,54 +8,21 @@ class BuildMenuItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTile(
-          leading: const Icon(Icons.home_outlined),
-          title: const Text('Home'),
-          onTap: (){
-
-          },
+        const Divider(
+          color: Colors.black54,
         ),
-        ListTile(
-          leading: const Icon(Icons.favorite_border),
-          title: const Text('Favorites'),
-          onTap: (){
-
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.update),
-          title: const Text('Updates'),
-          onTap: (){
-
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.notifications_outlined),
-          title: const Text('Notification'),
-          onTap: (){
-
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.edit_rounded),
-          title: const Text('Edit Profile'),
-          onTap: (){
-
-          },
-        ),
-        const Divider(color: Colors.black54,),
         ElevatedButton.icon(
-            onPressed: (){
+            onPressed: () {
               FirebaseAuth.instance.signOut();
             },
+            style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromRadius(20),
+                backgroundColor: Colors.blueGrey[700]),
             icon: const Icon(Icons.logout),
             label: const Text(
               'Log Out',
-              style: TextStyle(
-                fontSize: 24
-              ),
-            )
-        )
+              style: TextStyle(fontSize: 24),
+            ))
       ],
     );
   }

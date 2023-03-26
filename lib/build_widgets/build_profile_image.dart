@@ -8,10 +8,6 @@ class BuildProfileImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-        radius: profileHeight / 2,
-        backgroundColor: Colors.lightBlue,
-        backgroundImage: const AssetImage('assets/profile_image.jpg')
-    );
+    return const Icon(Icons.person, size: 100,);
   }
 }
